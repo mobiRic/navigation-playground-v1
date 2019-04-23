@@ -93,6 +93,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation "com.android.support:support-v4:${libVersions.supportLib}"
     implementation "com.android.support:appcompat-v7:${libVersions.supportLib}"
     implementation "com.android.support:design:${libVersions.supportLib}"
 
