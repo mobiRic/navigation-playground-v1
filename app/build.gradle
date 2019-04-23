@@ -13,6 +13,7 @@ ext {
     libVersions = [
             supportLib      : '28.0.0',
             constraintlayout: '1.1.3',
+            navigation      : '1.0.0',
     ]
     testVersions = [
             junit     : '4.12',
@@ -92,10 +93,14 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation "com.android.support:support-v4:${libVersions.supportLib}"
     implementation "com.android.support:appcompat-v7:${libVersions.supportLib}"
     implementation "com.android.support:design:${libVersions.supportLib}"
 
     implementation "com.android.support.constraint:constraint-layout:${libVersions.constraintlayout}"
+
+    implementation "android.arch.navigation:navigation-fragment:${libVersions.navigation}"
+    implementation "android.arch.navigation:navigation-ui:${libVersions.navigation}"
 
     /* Testing */
     testImplementation "junit:junit:${testVersions.junit}"

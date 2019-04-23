@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/redFragment">
+
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="mobi.glowworm.demo.navigationplaygroundv1.RedFragment"
+        android:label="@string/title_red"
+        tools:layout="@layout/fragment_red">
+    </fragment>
+
+    <fragment
+        android:id="@+id/yellowFragment"
+        android:name="mobi.glowworm.demo.navigationplaygroundv1.YellowFragment"
+        android:label="@string/title_yellow"
+        tools:layout="@layout/fragment_yellow">
+    </fragment>
+
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="mobi.glowworm.demo.navigationplaygroundv1.BlueFragment"
+        android:label="@string/title_blue"
+        tools:layout="@layout/fragment_blue">
+    </fragment>
+
+</navigation>
