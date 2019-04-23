@@ -28,10 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         navController = Navigation.findNavController(this, R.id.fragment_nav_host);
 
+        // set top level destinations
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.redFragment, R.id.yellowFragment, R.id.blueFragment)
+                .setDrawerLayout(drawerLayout)
+                .build();
+
         // bind toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
-        NavigationUI.setupWithNavController(toolbar, navController);
-        setSupportActionBar(toolbar);
+        NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);
 
         // bind navigation view
         NavigationView navView = findViewById(R.id.nav_view);
